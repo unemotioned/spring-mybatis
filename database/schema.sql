@@ -1,4 +1,4 @@
--- user: spring
+-- user: spring_practice
 -- pw: 1234
 
 drop table tbl_notice_file;
