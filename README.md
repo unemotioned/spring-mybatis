@@ -1,8 +1,8 @@
-# Spring Mybatis Test
+# Spring MyBatis Practice
 
-How to setup `Spring` project with `Mybatis`.
+How to setup `Spring` project with `MyBatis`.
 
-## MyBatis
+## MyBatis Setup
 
 ### STS Setting
 
