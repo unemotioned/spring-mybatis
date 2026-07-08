@@ -1,6 +1,6 @@
 # Spring MyBatis Practice
 
-How to setup `Spring` project with `MyBatis`.
+How to set up `Spring` project with `MyBatis`.
 
 ## MyBatis Setup
 
@@ -31,18 +31,25 @@ From [Maven Repository](https://mvnrepository.com/) get the following:
 </dependency>
 ```
 
+> NOTE
+> Use Latest versions if you can.
+
 ### applicationContext.xml
 
-Instead of `jdbcTemplate` use `sqlSession` and `sqlSessionTemplate`:
+Instead of using Spring's `JdbcTemplate`, MyBatis applications typically use
+`SqlSessionTemplate`.
+
+`SqlSessionTemplate` is a thread-safe implementation of `SqlSession` that
+integrates MyBatis with Spring's transaction management.
 
 ```xml
 <bean id="sqlSession"
     class="org.mybatis.spring.SqlSessionFactoryBean">
     <property name="dataSource" ref="dataSource" />
     <property name="configLocation"
-        value="classPath:mybatis-config.xml" />
+        value="classpath:mybatis-config.xml" />
     <property name="mapperLocations"
-        value="classPath:mapper/*.xml" />
+        value="classpath:mapper/*.xml" />
 </bean>
 
 <bean id="sqlSessionTemplate"
@@ -55,7 +62,7 @@ Instead of `jdbcTemplate` use `sqlSession` and `sqlSessionTemplate`:
 
 ## File Upload
 
-Add `commons-fileupload` and `commons-io` to `pom.xml` from `[mvnrepository.com](https://mvnrepository.com/).
+Add `commons-fileupload` and `commons-io` to `pom.xml` from [Maven Repository](https://mvnrepository.com/).
 
 And inside the `applicationContext.xml` add bean and set the max upload size of a file:
 

@@ -1,6 +1,13 @@
 .idea/
+*.iml
+
+.vscode/
+
 .settings/
 .classpath
 .project
 build/
 target/
+
+.DS_Store
+.localized
