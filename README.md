@@ -31,7 +31,8 @@ From [Maven Repository](https://mvnrepository.com/) get the following:
 </dependency>
 ```
 
-> NOTE
+> **NOTE**
+>
 > Use Latest versions if you can.
 
 ### applicationContext.xml
